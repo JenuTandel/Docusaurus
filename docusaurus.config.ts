@@ -37,8 +37,16 @@ const config: Config = {
       {
         docs: {
           sidebarPath: "./sidebars.ts",
-          // Please change this to your repo.
-          // Remove this to remove the "edit this page" links.
+          routeBasePath: "docs",
+          include: ["**/*.md", "**/*.mdx"],
+          // includeCurrentVersion: false,
+          // lastVersion: "current",
+          // versions: {
+          //   current: {
+          //     label: "1.0.1",
+          //     path: "1.0.1",
+          //   },
+          // },
           editUrl:
             "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
         },
@@ -72,6 +80,15 @@ const config: Config = {
         src: "img/favicon.svg",
       },
       items: [
+        {
+          type: "docsVersionDropdown",
+          position: "right",
+        },
+        {
+          label: "New Home",
+          to: "/new-home",
+          position: "left",
+        },
         {
           type: "docSidebar",
           sidebarId: "tutorialSidebar",
@@ -134,6 +151,11 @@ const config: Config = {
     prism: {
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,
+    },
+    colorMode: {
+      defaultMode: "dark",
+      disableSwitch: false,
+      respectPrefersColorScheme: true,
     },
   } satisfies Preset.ThemeConfig,
 };
