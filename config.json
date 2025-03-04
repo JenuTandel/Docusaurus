@@ -1,0 +1,15 @@
+{
+  "index_name": "personalData",
+  "start_urls": ["http://localhost:3000"],
+  "selectors": {
+    "lvl0": {
+      "selector": "nav > .breadcrumb",
+      "default_value": "Documentation"
+    },
+    "lvl1": "article h1",
+    "lvl2": "article h2",
+    "lvl3": "article h3",
+    "lvl4": "article h4",
+    "text": "article p, article li"
+  }
+}
