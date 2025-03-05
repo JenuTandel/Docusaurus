@@ -33,7 +33,7 @@ const config: Config = {
             const formattedDoc = docPath
               .replace("/docs/", "")
               .replace(".md", "");
-            return `http://localhost:3000/admin/#/collections/docs/entries/${formattedDoc}`;
+            return `https://serene-heliotrope-d011b7.netlify.app//admin/#/collections/docs/entries/${formattedDoc}`;
           },
         },
         blog: {
@@ -46,7 +46,7 @@ const config: Config = {
             const formattedSlug = blogPath
               .replace("/blog/", "")
               .replace(".md", "");
-            return `http://localhost:3000/admin/#/collections/blog/entries/${formattedSlug}`;
+            return `https://serene-heliotrope-d011b7.netlify.app//admin/#/collections/blog/entries/${formattedSlug}`;
           },
         },
         theme: {
