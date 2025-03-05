@@ -6,6 +6,7 @@ tags:
   - introduction
   - Releases
   - docusaurus
+title: Greetings
 ---
 
 # Greeting
@@ -31,3 +32,4 @@ The headers are well-spaced so that the hierarchy is clear.
 - that you want your users to remember
   - and you may nest them
     - multiple times
+    - Trial New one
