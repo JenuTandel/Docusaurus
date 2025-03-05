@@ -4,6 +4,7 @@ slug: first-blog-post
 tags:
   - foo
   - bar
+  - new
 authors:
   - name: Jinal Tandel
     title: Instruction Writer
