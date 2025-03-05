@@ -38,8 +38,12 @@ const config: Config = {
             type: ["rss", "atom"],
             xslt: true,
           },
-          editUrl:
-            "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
+          editUrl: ({ blogPath }) => {
+            const formattedSlug = blogPath
+              .replace("/blog/", "")
+              .replace(".md", "");
+            return `http://localhost:3000/admin/#/collections/blog/entries/${formattedSlug}`;
+          },
         },
         theme: {
           customCss: "./src/css/custom.css",

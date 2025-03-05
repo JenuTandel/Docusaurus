@@ -5,9 +5,9 @@ tags:
   - foo
   - bar
 authors:
-  - name: Garrison McMullen
+  - name: Jinal Tandel
     title: Instruction Writer
-    url: https://github.com/garrison0
+    url: https://github.com/JenuTandel/Docusaurus
     image_url: https://avatars.githubusercontent.com/u/4089393?v=4
 ---
 

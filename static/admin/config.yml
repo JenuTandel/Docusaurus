@@ -1,33 +1,26 @@
 backend:
-  name: github
-  branch: main
-  repo: https://github.com/JenuTandel/Docusaurus
+  name: git-gateway
+  branch: main # Adjust this if using a different branch
 
-# These lines should *not* be indented
-media_folder: "static/img" # Media files will be stored in the repo under static/images/uploads
-public_folder: "/img/" # The src attribute for uploaded media will begin with /images/uploads
+media_folder: "static/img"
+public_folder: "/img"
 
 collections:
-  - name: blog
-    label: "blog"
-    folder: blog
-    identifier_field: title
-    extension: md
-    widget: "list"
+  - name: "blog"
+    label: "Blog"
+    folder: "blog" # Ensure this is correct
     create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    slug: "{{slug}}" # Use slug as the filename identifier
     fields:
-      - { name: title, label: Title, widget: string }
-      - { name: body, label: Body, widget: markdown }
-      - { name: slug, label: Slug, widget: string }
-      - label: "Tags"
-        name: "tags"
-        widget: "list"
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Slug", name: "slug", widget: "string" }
+      - { label: "Tags", name: "tags", widget: "list", default: [] }
       - label: "Authors"
         name: "authors"
         widget: "list"
         fields:
-          - { name: name, label: Name, widget: string }
-          - { name: title, label: Title, widget: string }
-          - { name: url, label: URL, widget: string }
-          - { name: imageUrl, label: ImageURL, widget: string }
+          - { label: "Name", name: "name", widget: "string" }
+          - { label: "Title", name: "title", widget: "string" }
+          - { label: "URL", name: "url", widget: "string" }
+          - { label: "Image", name: "image_url", widget: "string" }
+      - { label: "Body", name: "body", widget: "markdown" }
