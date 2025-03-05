@@ -1,5 +1,6 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: JenuTandel/Docusaurus
   branch: main # Adjust this if using a different branch
 
 media_folder: "static/img"
@@ -23,4 +24,14 @@ collections:
           - { label: "Title", name: "title", widget: "string" }
           - { label: "URL", name: "url", widget: "string" }
           - { label: "Image", name: "image_url", widget: "string" }
+      - { label: "Body", name: "body", widget: "markdown" }
+
+  - name: "docs"
+    label: "Docs"
+    folder: "docs"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - { label: "Title", name: "title", widget: "string" }
+      - { label: "Slug", name: "slug", widget: "string" }
       - { label: "Body", name: "body", widget: "markdown" }

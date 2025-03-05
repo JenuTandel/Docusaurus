@@ -29,8 +29,12 @@ const config: Config = {
           sidebarPath: "./sidebars.ts",
           routeBasePath: "docs",
           include: ["**/*.md", "**/*.mdx"],
-          editUrl:
-            "https://github.com/facebook/docusaurus/tree/main/packages/create-docusaurus/templates/shared/",
+          editUrl: ({ docPath }) => {
+            const formattedDoc = docPath
+              .replace("/docs/", "")
+              .replace(".md", "");
+            return `http://localhost:3000/admin/#/collections/docs/entries/${formattedDoc}`;
+          },
         },
         blog: {
           showReadingTime: true,

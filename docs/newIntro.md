@@ -1,6 +1,7 @@
 ---
 description: Create a doc page with rich content.
 slug: newIntro
+title: New Intro
 tags:
   - Releases
   - docusaurus
