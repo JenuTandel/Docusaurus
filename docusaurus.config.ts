@@ -18,7 +18,15 @@ const config: Config = {
 
   i18n: {
     defaultLocale: "en",
-    locales: ["en"],
+    locales: ["en", "fr", "fa"],
+    localeConfigs: {
+      en: {
+        htmlLang: "en-GB",
+      },
+      fa: {
+        direction: "rtl",
+      },
+    },
   },
 
   presets: [
@@ -64,6 +72,10 @@ const config: Config = {
         src: "img/favicon.svg",
       },
       items: [
+        {
+          type: "localeDropdown",
+          position: "left",
+        },
         {
           type: "docsVersionDropdown",
           position: "right",
@@ -144,7 +156,7 @@ const config: Config = {
       darkTheme: prismThemes.dracula,
     },
     colorMode: {
-      defaultMode: "dark",
+      defaultMode: "light",
       disableSwitch: false,
       respectPrefersColorScheme: true,
     },

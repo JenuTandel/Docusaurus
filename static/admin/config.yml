@@ -33,4 +33,17 @@ collections:
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Slug", name: "slug", widget: "string" }
+      - label: "Table"
+        name: "table"
+        widget: "list"
+        required: false
+        fields:
+          - { label: "Logo", name: "col1", widget: "string", required: false }
+          - { label: "Name", name: "col2", widget: "string", required: false }
+          - {
+              label: "Description",
+              name: "col3",
+              widget: "string",
+              required: false,
+            }
       - { label: "Body", name: "body", widget: "markdown" }
