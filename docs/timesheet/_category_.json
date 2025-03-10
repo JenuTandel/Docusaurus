@@ -1,0 +1,8 @@
+{
+  "label": "Timesheet",
+  "position": 1,
+  "link": {
+    "type": "generated-index",
+    "description": "Documents related to timesheet"
+  }
+}
