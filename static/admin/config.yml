@@ -34,7 +34,7 @@ collections:
       depth: 3
     create: true
     slug: "{{slug}}"
-    include: ["**/*.md", "**/*.mdx"]
+    extension: "markdown"
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Slug", name: "slug", widget: "string", required: false }
