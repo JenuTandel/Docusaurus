@@ -28,12 +28,14 @@ collections:
   - name: "docs"
     label: "Docs"
     folder: "docs"
+    nested:
+      depth: 3
     create: true
     slug: "{{slug}}"
     extension: "markdown"
     fields:
       - { label: "Title", name: "title", widget: "string" }
-      - { label: "Slug", name: "slug", widget: "string" }
+      - { label: "Slug", name: "slug", widget: "string", required: false }
       - label: "Table"
         name: "table"
         widget: "list"
