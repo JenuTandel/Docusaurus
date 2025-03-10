@@ -11,10 +11,11 @@ collections:
     label: "Blog"
     folder: "blog" # Ensure this is correct
     create: true
+    format: "frontmatter"
     slug: "{{slug}}" # Use slug as the filename identifier
     fields:
       - { label: "Title", name: "title", widget: "string" }
-      - { label: "Slug", name: "slug", widget: "string" }
+      - { label: "Slug", name: "slug", widget: "string", required: false }
       - { label: "Tags", name: "tags", widget: "list", default: [] }
       - label: "Authors"
         name: "authors"
@@ -28,14 +29,17 @@ collections:
   - name: "docs"
     label: "Docs"
     folder: "docs"
+    format: "frontmatter"
     nested:
       depth: 3
     create: true
     slug: "{{slug}}"
-    extension: "markdown"
+    include: ["**/*.md", "**/*.mdx"]
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Slug", name: "slug", widget: "string", required: false }
+      - { label: "Description", name: "description", required: false }
+      - { label: "Tags", name: "tags", required: false }
       - label: "Table"
         name: "table"
         widget: "list"
