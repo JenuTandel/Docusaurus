@@ -30,6 +30,7 @@ collections:
     folder: "docs"
     create: true
     slug: "{{slug}}"
+    extension: "markdown"
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Slug", name: "slug", widget: "string" }

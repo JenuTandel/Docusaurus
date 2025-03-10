@@ -38,9 +38,7 @@ const config: Config = {
           routeBasePath: "docs",
           include: ["**/*.md", "**/*.mdx"],
           editUrl: ({ docPath }) => {
-            const formattedDoc = docPath
-              .replace("/docs/", "")
-              .replace(".md", "");
+            const formattedDoc = docPath.replace(/\.mdx?$/, "");
             return `https://serene-heliotrope-d011b7.netlify.app//admin/#/collections/docs/entries/${formattedDoc}`;
           },
         },
