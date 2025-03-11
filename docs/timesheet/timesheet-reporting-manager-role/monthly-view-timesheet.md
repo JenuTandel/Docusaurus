@@ -5,7 +5,7 @@ title: Monthly View Timesheet
 
 The Reporting manager also has the monthly view for the timesheet, which would serve as a monthly summary of the timesheet for a specific project.
 
-![Billable nonBillable Hours](./img/monthly-view.png)
+![Billable nonBillable Hours](/img/monthly-view.png)
 
 The month and year can be selected from the calendar. By default, the current month would be selected, and its data will be displayed.
 
