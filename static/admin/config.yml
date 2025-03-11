@@ -32,7 +32,7 @@ collections:
     format: "frontmatter"
     identifier_field: "title"
     nested:
-      depth: 3
+      depth: 5
     create: true
     slug: "{{fields.title}}"
     fields:
