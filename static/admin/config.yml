@@ -30,11 +30,11 @@ collections:
     label: "Docs"
     folder: "docs"
     format: "frontmatter"
+    identifier_field: "title"
     nested:
       depth: 3
     create: true
-    slug: "{{slug}}"
-    extension: "markdown"
+    slug: "{{fields.title}}"
     fields:
       - { label: "Title", name: "title", widget: "string" }
       - { label: "Slug", name: "slug", widget: "string", required: false }
